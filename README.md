@@ -1,6 +1,4 @@
-# evo
-
-## Hi!
+# Hi!
 Did You ever think about evolution? I did. 
 
 This repository is made for that problem (is not an evolution simulator problem?).
