@@ -5,7 +5,7 @@ var col, row;
 var zoom = 1.0;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(400, 400);
   
   col = width / cw * 2;
   row = width / cw * 2;
@@ -35,9 +35,12 @@ function draw() {
 }
 
 function keyPressed() {
-  if(keyCode == 187) {
+  if(keyCode == 187 || keyCode == 190) {
     zoom *= 1.05;
-  }else if(keyCode == 189) {
+    zoom = min(zoom, 2.0);
+  }else if(keyCode == 189 || keyCode == 188) {
     zoom *= 0.95;
+    zoom = max(zoom, 0.5);
   }
+  //console.log("key pressed: " + keyCode);
 }
